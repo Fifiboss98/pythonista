@@ -1,0 +1,268 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <section>
+        <nav class="navbar navbar-expand-lg navbar-light bg-success p-5 mb-5">
+            <div class="container-fluid">
+                <a class="navbar-brand text-white" href="#">PYTHONISTA</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" aria-current="page" href="#">Acceuil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" href="" data-bs-toggle="modal"
+                                data-bs-target="#exampleModalToggle">S'enregistrer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <section>
+        <h1 class="text-center m-5 p-5">
+            Bienvenue à l'Académie Pythonista
+        </h1>
+
+        <h2 class="text-center text-black-50 text-decoration-underline">
+            Nos différents centres de Formation
+        </h2>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row d-flex justify-content-center text-center m-5">
+                <div class="col-md-6 ">
+                    <a href="">
+                        <img class="image p-3" src="{% static 'img/deb.jpg' %}">
+                    </a>
+                </div>
+                <h5 class="text-success text-decoration-underline">
+                    COLLEGE
+                </h5>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, necessitatibus?
+                </p>
+
+                <div class="col-md-6">
+                    <a href="">
+                        <img class="image p-3" src="{% static 'img/int.jpg' %}">
+                    </a>
+                </div>
+                <h5 class="text-primary text-decoration-underline">
+                    LYCEE
+                </h5>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam, quis.
+                </p>
+
+                <div class="col-md-6">
+                    <a href="">
+                        <img class="image p-3" src="{% static 'img/avc.jpg' %}">
+                    </a>
+                </div>
+                <h5 class="text-warning text-decoration-underline">
+                    PREPA
+                </h5>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, quis.
+                </p>
+
+                <div class="col-md-6">
+                    <a href="">
+                        <img class="image p-3" src="{% static 'img/pro.jpg' %}">
+                    </a>
+                </div>
+                <h5 class="text-danger text-decoration-underline">
+                    SUPERIEUR
+                </h5>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, sed.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <p class="h4 p-4">
+                Des questions?
+                Veuillez nous contacter.
+            </p>
+        </div>
+
+        <div class="container align-left justify-content-left mb-5">
+            <div class="mb-3 w-50">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="mb-3 w-50">
+                <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button type="button" class="btn btn-primary">Envoyer</button>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container-fluid bg-success p-2 text-center">
+            <p class="h6 text-white-50">
+                Copyright &copy; 2022 <br> Tous droits réservés.
+            </p>
+        </div>
+    </section>
+
+
+    <section>
+        <!-- Modal -->
+        <div class="modal fade p-3" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Se Connecter</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Addresse mail</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Se souvenir de moi</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer p-2">
+                        <a href="mod2">
+                            <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal2">Créer un compte</button>
+                        </a>
+                        <button type="button" class="btn btn-outline-danger">Se Connecter</button>
+                        <div class="container">
+                            <p>
+                                <a class="text-muted" href="">
+                                    Forgot your password?
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalToggleLabel">Créer un compte</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Adresse mail</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Envoyer</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="container">
+                        <a href="" data-bs-target="#exampleModalToggle2" class="text-decoration-none text-muted">
+                            Déjà un compte?
+                        </a>
+                    </div>
+                    <button class="btn btn-outline-success" data-bs-target="#exampleModalToggle2"
+                        data-bs-toggle="modal">Se connecter</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalToggleLabel2">Se connecter</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Adresse mail</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <button type="submit" class="btn btn-success">Login</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="container">
+                        <a href="" class="text-decoration-none text-muted">
+                            Nouveau membre?
+                        </a>
+                    </div>
+                    <button class="btn btn-outline-primary" data-bs-target="#exampleModalToggle2"
+                        data-bs-toggle="modal">Créer un compte</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+</body>
+
+</html>
